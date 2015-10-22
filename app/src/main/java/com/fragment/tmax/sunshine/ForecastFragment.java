@@ -51,7 +51,7 @@ public  class ForecastFragment extends android.support.v4.app.Fragment {
         int id = item.getItemId();
         if (id == R.id.action_refresh) {
             FetchWeatherTAsk fetchWeatherTAsk = new FetchWeatherTAsk();
-            fetchWeatherTAsk.execute();
+            fetchWeatherTAsk.execute("Lagos"); //You need at least one parameter, or fetchWeatherTask will return null.
             return true;
         }
 
@@ -146,9 +146,10 @@ public  class ForecastFragment extends android.support.v4.app.Fragment {
                     // Stream was empty.  No point in parsing.
                     return null;
                 }
-                Log.v(LOG_TAG, "Forcast JSON String" + forecastJsonStr);
                 forecastJsonStr = buffer.toString();
+                Log.v(LOG_TAG, "Forcast JSON String: " + forecastJsonStr); //This goes after forecastJsonStr = buffer.toString();.
             } catch (IOException e) {
+//                Log.d("ERROR", "Error.");
                 Log.e(LOG_TAG, "Error ", e);
                 // If the code didn't successfully get the weather data, there's no point in attemping
                 // to parse it.
