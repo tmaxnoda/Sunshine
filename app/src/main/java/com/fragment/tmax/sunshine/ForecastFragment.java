@@ -124,6 +124,7 @@ public  class ForecastFragment extends android.support.v4.app.Fragment {
                 // Possible parameters are avaiable at OWM's forecast API page, at
                 // http://openweathermap.org/API#forecast
                // URL url = new URL("http://api.openweathermap.org/data/2.5/forecast/daily?q=Lagos&mode=json&units=metric&cnt=7&appid=bd82977b86bf27fb59a04b61b657fb6f");
+                // introducing URI builder..
                 final String FORECAST_BASE_URL =
                         "http://api.example.org/data/2.5/forecast/daily?";
                 final String QUERY_PARAM = "q";
