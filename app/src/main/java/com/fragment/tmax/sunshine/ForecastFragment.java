@@ -126,7 +126,7 @@ public  class ForecastFragment extends android.support.v4.app.Fragment {
                // URL url = new URL("http://api.openweathermap.org/data/2.5/forecast/daily?q=Lagos&mode=json&units=metric&cnt=7&appid=bd82977b86bf27fb59a04b61b657fb6f");
                 // introducing URI builder..
                 final String FORECAST_BASE_URL =
-                        "http://api.example.org/data/2.5/forecast/daily?";
+                        "http://api.openweathermap.org/data/2.5/forecast/daily?"; //changed from api.example.org to api.openweathermap.org
                 final String QUERY_PARAM = "q";
                 final String FORMAT_PARAM = "mode";
                 final String UNITS_PARAM = "units";
